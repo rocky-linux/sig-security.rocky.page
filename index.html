@@ -339,6 +339,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#source-code" class="md-nav__link">
+    Source code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#contributing" class="md-nav__link">
     Contributing
   </a>
@@ -391,7 +398,7 @@
 
 
 <h1 id="sigsecurity-wiki">SIG/Security Wiki<a class="headerlink" href="#sigsecurity-wiki" title="Permanent link">&para;</a></h1>
-<p>The Security SIG repositories provide extra security-related packages and security-hardened override packages (replacing those from the main distribution) for Rocky Linux and other EL distributions.</p>
+<p>The Security SIG repositories provide extra security-related packages and security-hardened override packages (replacing those from the main distribution) for Rocky Linux and other Enterprise Linux (EL) distributions.</p>
 <h2 id="responsibilities">Responsibilities<a class="headerlink" href="#responsibilities" title="Permanent link">&para;</a></h2>
 <p>Developing and maintaining various security related packages that are not in upstream EL. Identifying, developing, and maintaining security hardening changes relative to upstream EL packages. Occasionally including/backporting additional security fixes that are not yet in upstream EL packages. Contributing to the respective upstreams where practical.</p>
 <h2 id="repo-installation">Repo Installation<a class="headerlink" href="#repo-installation" title="Permanent link">&para;</a></h2>
@@ -405,11 +412,14 @@
 </ul>
 <h3 id="override-packages-currently-only-for-el9">Override packages (currently only for EL9)<a class="headerlink" href="#override-packages-currently-only-for-el9" title="Permanent link">&para;</a></h3>
 <ul>
-<li>glibc (adds many security-hardening changes originating from Owl and ALT Linux on top of EL package)</li>
+<li>glibc (adds many security-hardening changes originating from Owl and ALT Linux on top of EL package, fixes <a href="https://www.openwall.com/lists/oss-security/2023/09/25/1">CVE-2023-4527</a>)</li>
 <li>openssh (fewer shared libraries exposed in sshd processes while otherwise fully matching EL package's functionality)</li>
 </ul>
 <p>The changes are described in more detail in the package changelogs.
+The inclusion of additional security fixes will be "reverted" if and when those get included in upstream EL packages that we rebase our changes on.
 More packages/changes are planned, including override packages also for EL8.</p>
+<h2 id="source-code">Source code<a class="headerlink" href="#source-code" title="Permanent link">&para;</a></h2>
+<p>Just like for other Rocky Linux SIGs, the source trees for Security SIG packages are maintained in <a href="https://git.rockylinux.org/sig/security/src">per-package git repositories</a>. Each repository contains branches <code>r8</code> and/or <code>r9</code> corresponding to target EL version.</p>
 <h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h2>
 <p>If anyone else wants to join this effort - in any capacity including development, maintenance, testing, documentation, user support, spreading the word, or something else - please join the Mattermost channel below and let us know!</p>
 <p>We also welcome well-reasoned suggestions/feedback/preferences on direction we should take (e.g., only making changes on top of EL's vs. offering newer upstream versions), what else to package, and what other changes to include.</p>
