@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sig-security.rocky.page/</loc>
-         <lastmod>2023-11-14</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sig-security.rocky.page/packages/glibc/</loc>
-         <lastmod>2023-11-14</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sig-security.rocky.page/packages/hardened_malloc/</loc>
-         <lastmod>2023-11-14</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sig-security.rocky.page/packages/openssh/</loc>
-         <lastmod>2023-11-14</lastmod>
+         <lastmod>2023-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
