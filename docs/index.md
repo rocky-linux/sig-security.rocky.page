@@ -32,6 +32,8 @@ This isn't as secure as checking the package signature would be _if_ you previou
 
 Install the package with `rpm -U --nodeps`. The `--nodeps` option is needed to bypass the dependency check on our `rocky-release` package. In essense, you're manually confirming to `rpm` that you're installing on a compatible distro.
 
+You'll normally install packages from the mirrors, which should just work. However, if there's any issue with the mirrors and you uncomment our `baseurl` line instead, then on non-Rocky you'll need to use `DNF_VAR_sigcontentdir=/pub/sig dnf` in place of simply `dnf`.
+
 ## Packages
 
 ### Extra packages (for EL8 and EL9)
@@ -41,11 +43,12 @@ Install the package with `rpm -U --nodeps`. The `--nodeps` option is needed to b
 
 ### Extra packages (currently only for EL9)
 
-- [hardened_malloc](https://github.com/GrapheneOS/hardened_malloc) (Security-focused memory allocator providing the malloc API, and a script to preload it into existing program binaries)
+- [hardened_malloc](packages/hardened_malloc.md) (Security-focused memory allocator providing the malloc API, and a script to preload it into existing program binaries)
 
 ### Override packages (currently only for EL9)
 
 - [glibc](packages/glibc.md) (adds many security-hardening changes originating from Owl and ALT Linux on top of EL package)
+- [microcode_ctl](packages/microcode_ctl.md) (updates Intel CPU microcode to microcode-20231114, which fixes CVE-2023-23583)
 - [openssh](packages/openssh.md) (fewer shared libraries exposed in sshd processes while otherwise fully matching EL package's functionality)
 
 The changes are described in more detail on the per-package wiki pages linked above, as well as in the package changelogs.
