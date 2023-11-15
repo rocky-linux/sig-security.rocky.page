@@ -32,6 +32,8 @@ This isn't as secure as checking the package signature would be _if_ you previou
 
 Install the package with `rpm -U --nodeps`. The `--nodeps` option is needed to bypass the dependency check on our `rocky-release` package. In essense, you're manually confirming to `rpm` that you're installing on a compatible distro.
 
+You'll normally install packages from the mirrors, which should just work. However, if there's any issue with the mirrors and you uncomment our `baseurl` line instead, then on non-Rocky you'll need to use `DNF_VAR_sigcontentdir=/pub/sig dnf` in place of simply `dnf`.
+
 ## Packages
 
 ### Extra packages (for EL8 and EL9)
