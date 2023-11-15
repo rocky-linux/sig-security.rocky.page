@@ -2,7 +2,7 @@
 
 ## EL9
 
-- Version `4:20231114-1`
+- Version `4:20231114-1.el9_2.security`
 - Based on `4:20230808-2`
 
 ### Changes summary
