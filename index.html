@@ -460,7 +460,7 @@
         
   
   <span class="md-ellipsis">
-    CVE-2023-23583: microcode_ctl: Intel CPUs: execution of MOVSB instructions with redundant REX prefix leads to unintended system behavior
+    CVE-2023-23583: microcode_ctl
   </span>
   
 
@@ -480,7 +480,7 @@
         
   
   <span class="md-ellipsis">
-    CVE-2023-4911: glibc: Looney Tunables: buffer overflow in ld.so leading to privilege escalation
+    CVE-2023-4911: glibc
   </span>
   
 
@@ -692,7 +692,7 @@
 <h3 id="override-packages-currently-only-for-el9">Override packages (currently only for EL9)<a class="headerlink" href="#override-packages-currently-only-for-el9" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="packages/glibc/">glibc</a> (adds many security-hardening changes originating from Owl and ALT Linux on top of EL package)</li>
-<li><a href="packages/microcode_ctl/">microcode_ctl</a> (updates Intel CPU microcode to microcode-20231114, which fixes CVE-2023-23583)</li>
+<li><a href="packages/microcode_ctl/">microcode_ctl</a> (updates Intel CPU microcode to microcode-20231114, which fixes <a href="issues/CVE-2023-23583/">CVE-2023-23583</a>)</li>
 <li><a href="packages/openssh/">openssh</a> (fewer shared libraries exposed in sshd processes while otherwise fully matching EL package's functionality)</li>
 </ul>
 <p>The changes are described in more detail on the per-package wiki pages linked above, as well as in the package changelogs.
