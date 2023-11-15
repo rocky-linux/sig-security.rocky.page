@@ -7,7 +7,7 @@
 
 ### Changes summary
 
-- Update Intel CPU microcode to microcode-20231114 (fixes [CVE-2023-23583](https://www.openwall.com/lists/oss-security/2023/11/14/4)), temporarily dropping most documentation patches
+- Update Intel CPU microcode to microcode-20231114 (fixes [CVE-2023-23583](../issues/CVE-2023-23583.md)), temporarily dropping most documentation patches
 
 ### Change log
 

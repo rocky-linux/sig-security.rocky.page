@@ -16,7 +16,7 @@
 
 #### Known-effective vulnerability mitigations and fixes
 
-`2.34-60.el9_2.security.0.2` included mitigations sufficient to avoid security exposure of [CVE-2023-4911](https://www.openwall.com/lists/oss-security/2023/10/03/2) and a backport of upstream glibc fix of [CVE-2023-4527](https://www.openwall.com/lists/oss-security/2023/09/25/1) that was not yet in upstream EL. In the update to `2.34-60.7.el9_2.security.0.3`, we retained the mitigations while rebasing on upstream EL's package with upstream fixes for these vulnerabilities (and more).
+`2.34-60.el9_2.security.0.2` included mitigations sufficient to avoid security exposure of [CVE-2023-4911](../issues/CVE-2023-4911.md) and a backport of upstream glibc fix of [CVE-2023-4527](https://www.openwall.com/lists/oss-security/2023/09/25/1) that was not yet in upstream EL. In the update to `2.34-60.7.el9_2.security.0.3`, we retained the mitigations while rebasing on upstream EL's package with upstream fixes for these vulnerabilities (and more).
 
 In general, inclusion of additional security fixes will be "reverted" if and when those get included in upstream EL packages that we rebase our changes on.
 
