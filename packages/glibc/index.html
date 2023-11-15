@@ -620,7 +620,7 @@
 <li>In <code>tmpfile(3)</code> use the <code>TMPDIR</code> environment variable (when not running SUID/SGID/setcap) (ALT Linux)</li>
 </ul>
 <h4 id="known-effective-vulnerability-mitigations-and-fixes">Known-effective vulnerability mitigations and fixes<a class="headerlink" href="#known-effective-vulnerability-mitigations-and-fixes" title="Permanent link">&para;</a></h4>
-<p><code>2.34-60.el9_2.security.0.2</code> included mitigations sufficient to avoid security exposure of <a href="https://www.openwall.com/lists/oss-security/2023/10/03/2">CVE-2023-4911</a> and a backport of upstream glibc fix of <a href="https://www.openwall.com/lists/oss-security/2023/09/25/1">CVE-2023-4527</a> that was not yet in upstream EL. In the update to <code>2.34-60.7.el9_2.security.0.3</code>, we retained the mitigations while rebasing on upstream EL's package with upstream fixes for these vulnerabilities (and more).</p>
+<p><code>2.34-60.el9_2.security.0.2</code> included mitigations sufficient to avoid security exposure of <a href="../../issues/CVE-2023-4911/">CVE-2023-4911</a> and a backport of upstream glibc fix of <a href="https://www.openwall.com/lists/oss-security/2023/09/25/1">CVE-2023-4527</a> that was not yet in upstream EL. In the update to <code>2.34-60.7.el9_2.security.0.3</code>, we retained the mitigations while rebasing on upstream EL's package with upstream fixes for these vulnerabilities (and more).</p>
 <p>In general, inclusion of additional security fixes will be "reverted" if and when those get included in upstream EL packages that we rebase our changes on.</p>
 <h3 id="change-log">Change log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>* Fri Oct  6 2023 Solar Designer &lt;solar@openwall.com&gt; - 2.34-60.7.el9.security.0.3
@@ -673,7 +673,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2023</span>
       
     
   </small>
