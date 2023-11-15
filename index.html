@@ -14,7 +14,7 @@
       
       
       
-        <link rel="next" href="packages/glibc/">
+        <link rel="next" href="issues/CVE-2023-23583/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -415,8 +415,6 @@
       
         
       
-        
-      
     
     
     
@@ -438,7 +436,7 @@
             
   
   <span class="md-ellipsis">
-    Packages
+    Issues
   </span>
   
 
@@ -447,6 +445,104 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Issues
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="issues/CVE-2023-23583/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CVE-2023-23583: microcode_ctl: Intel CPUs: execution of MOVSB instructions with redundant REX prefix leads to unintended system behavior
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="issues/CVE-2023-4911/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CVE-2023-4911: glibc: Looney Tunables: buffer overflow in ld.so leading to privilege escalation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Packages
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Packages
           </label>
@@ -483,6 +579,26 @@
   
   <span class="md-ellipsis">
     Extra package: hardened_malloc
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="packages/microcode_ctl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Override package: microcode_ctl
   </span>
   
 
@@ -562,6 +678,7 @@
 </code></pre></div>
 <p>This isn't as secure as checking the package signature would be <em>if</em> you previously had our package signing public key, but on another distro you probably don't have that yet, so checking the digest against its copy obtained from this separate website is a best-effort measure.</p>
 <p>Install the package with <code>rpm -U --nodeps</code>. The <code>--nodeps</code> option is needed to bypass the dependency check on our <code>rocky-release</code> package. In essense, you're manually confirming to <code>rpm</code> that you're installing on a compatible distro.</p>
+<p>You'll normally install packages from the mirrors, which should just work. However, if there's any issue with the mirrors and you uncomment our <code>baseurl</code> line instead, then on non-Rocky you'll need to use <code>DNF_VAR_sigcontentdir=/pub/sig dnf</code> in place of simply <code>dnf</code>.</p>
 <h2 id="packages">Packages<a class="headerlink" href="#packages" title="Permanent link">&para;</a></h2>
 <h3 id="extra-packages-for-el8-and-el9">Extra packages (for EL8 and EL9)<a class="headerlink" href="#extra-packages-for-el8-and-el9" title="Permanent link">&para;</a></h3>
 <ul>
@@ -570,11 +687,12 @@
 </ul>
 <h3 id="extra-packages-currently-only-for-el9">Extra packages (currently only for EL9)<a class="headerlink" href="#extra-packages-currently-only-for-el9" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="https://github.com/GrapheneOS/hardened_malloc">hardened_malloc</a> (Security-focused memory allocator providing the malloc API, and a script to preload it into existing program binaries)</li>
+<li><a href="packages/hardened_malloc/">hardened_malloc</a> (Security-focused memory allocator providing the malloc API, and a script to preload it into existing program binaries)</li>
 </ul>
 <h3 id="override-packages-currently-only-for-el9">Override packages (currently only for EL9)<a class="headerlink" href="#override-packages-currently-only-for-el9" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="packages/glibc/">glibc</a> (adds many security-hardening changes originating from Owl and ALT Linux on top of EL package)</li>
+<li><a href="packages/microcode_ctl/">microcode_ctl</a> (updates Intel CPU microcode to microcode-20231114, which fixes CVE-2023-23583)</li>
 <li><a href="packages/openssh/">openssh</a> (fewer shared libraries exposed in sshd processes while otherwise fully matching EL package's functionality)</li>
 </ul>
 <p>The changes are described in more detail on the per-package wiki pages linked above, as well as in the package changelogs.
@@ -632,7 +750,7 @@ More packages/changes are planned, including override packages also for EL8.</p>
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 31, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2023</span>
       
     
   </small>
