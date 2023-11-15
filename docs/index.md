@@ -46,6 +46,7 @@ Install the package with `rpm -U --nodeps`. The `--nodeps` option is needed to b
 ### Override packages (currently only for EL9)
 
 - [glibc](packages/glibc.md) (adds many security-hardening changes originating from Owl and ALT Linux on top of EL package)
+- [microcode_ctl](packages/microcode_ctl.md) (updates Intel CPU microcode to microcode-20231114, which fixes CVE-2023-23583)
 - [openssh](packages/openssh.md) (fewer shared libraries exposed in sshd processes while otherwise fully matching EL package's functionality)
 
 The changes are described in more detail on the per-package wiki pages linked above, as well as in the package changelogs.
