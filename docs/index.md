@@ -41,7 +41,7 @@ Install the package with `rpm -U --nodeps`. The `--nodeps` option is needed to b
 
 ### Extra packages (currently only for EL9)
 
-- [hardened_malloc](https://github.com/GrapheneOS/hardened_malloc) (Security-focused memory allocator providing the malloc API, and a script to preload it into existing program binaries)
+- [hardened_malloc](packages/hardened_malloc.md) (Security-focused memory allocator providing the malloc API, and a script to preload it into existing program binaries)
 
 ### Override packages (currently only for EL9)
 
