@@ -45,10 +45,13 @@ You'll normally install packages from the mirrors, which should just work. Howev
 
 - [hardened_malloc](packages/hardened_malloc.md) (Security-focused memory allocator providing the malloc API, and a script to preload it into existing program binaries)
 
+### Override packages (for EL8 and EL9)
+
+- [microcode_ctl](packages/microcode_ctl.md) (updates Intel CPU microcode to microcode-20231114, which fixes [CVE-2023-23583](issues/CVE-2023-23583.md))
+
 ### Override packages (currently only for EL9)
 
 - [glibc](packages/glibc.md) (adds many security-hardening changes originating from Owl and ALT Linux on top of EL package)
-- [microcode_ctl](packages/microcode_ctl.md) (updates Intel CPU microcode to microcode-20231114, which fixes [CVE-2023-23583](issues/CVE-2023-23583.md))
 - [openssh](packages/openssh.md) (fewer shared libraries exposed in sshd processes while otherwise fully matching EL package's functionality)
 
 The changes are described in more detail on the per-package wiki pages linked above, as well as in the package changelogs.
