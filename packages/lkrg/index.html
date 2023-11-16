@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://sig-security.rocky.page/packages/openssh/">
+        <link rel="canonical" href="https://sig-security.rocky.page/packages/lkrg/">
       
       
-        <link rel="prev" href="../microcode_ctl/">
+        <link rel="prev" href="../hardened_malloc/">
       
       
-        <link rel="next" href="../passwdqc/">
+        <link rel="next" href="../microcode_ctl/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Override package: openssh - SIG/Security Wiki</title>
+        <title>Extra package: lkrg - SIG/Security Wiki</title>
       
     
     
@@ -79,7 +79,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#override-package-openssh" class="md-skip">
+        <a href="#extra-package-lkrg" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Override package: openssh
+              Extra package: lkrg
             
           </span>
         </div>
@@ -462,9 +462,29 @@
                 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../lkrg/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Extra package: lkrg
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -473,6 +493,67 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#el8-and-el9" class="md-nav__link">
+    EL8 and EL9
+  </a>
+  
+    <nav class="md-nav" aria-label="EL8 and EL9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-summary" class="md-nav__link">
+    Package summary
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-in-rocky-linux" class="md-nav__link">
+    Usage in Rocky Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testing-and-recovery" class="md-nav__link">
+    Testing and recovery
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-log" class="md-nav__link">
+    Change log
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -502,29 +583,9 @@
                 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Override package: openssh
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../openssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -533,53 +594,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#el9" class="md-nav__link">
-    EL9
-  </a>
-  
-    <nav class="md-nav" aria-label="EL9">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#changes-summary" class="md-nav__link">
-    Changes summary
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#change-log" class="md-nav__link">
-    Change log
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -627,7 +641,7 @@
                   
 
   
-    <a href="https://git.resf.org/security/wiki/_edit/main/docs/packages/openssh.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://git.resf.org/security/wiki/_edit/main/docs/packages/lkrg.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -635,25 +649,46 @@
   
 
 
-<h1 id="override-package-openssh">Override package: openssh<a class="headerlink" href="#override-package-openssh" title="Permanent link">&para;</a></h1>
-<h2 id="el9">EL9<a class="headerlink" href="#el9" title="Permanent link">&para;</a></h2>
+<h1 id="extra-package-lkrg">Extra package: lkrg<a class="headerlink" href="#extra-package-lkrg" title="Permanent link">&para;</a></h1>
+<h2 id="el8-and-el9">EL8 and EL9<a class="headerlink" href="#el8-and-el9" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Version <code>8.7p1-30.el9_2.security.0.2</code></li>
-<li>Based on <code>8.7p1-30.el9_2</code></li>
+<li>Version <code>lkrg-0.9.7-4.el9_2.security</code></li>
+<li>Based on upstream version <code>0.9.7</code></li>
 </ul>
-<h3 id="changes-summary">Changes summary<a class="headerlink" href="#changes-summary" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Instead of linking against <code>libsystemd</code>, load it dynamically in a temporary child process to avoid polluting actual <code>sshd</code>'s address space with that library and its many dependencies (shortens <code>ldd sshd</code> output from 28 to 20 lines)</li>
-</ul>
+<h3 id="package-summary">Package summary<a class="headerlink" href="#package-summary" title="Permanent link">&para;</a></h3>
+<p>LKRG, or Linux Kernel Runtime Guard, is a kernel module that performs runtime integrity checking of the Linux kernel and detection of security vulnerability exploits against the kernel.</p>
+<p>More information is available on the <a href="https://lkrg.org">LKRG homepage</a> and in the documentation files included in the package.</p>
+<h3 id="usage-in-rocky-linux">Usage in Rocky Linux<a class="headerlink" href="#usage-in-rocky-linux" title="Permanent link">&para;</a></h3>
+<p>Due to EL's kABI stability and the <code>weak-modules</code> mechanism, which this package uses, the same binary package of LKRG works across different kernel revisions/builds within the same EL minor release (e.g., 9.2). Once there's a new minor release (e.g., 9.2 is upgraded to 9.3), we'll provide a new build of LKRG accordingly.</p>
+<p>Installing the package does not automatically start LKRG nor enable it to start on system bootup. To start LKRG please use:</p>
+<div class="highlight"><pre><span></span><code>systemctl start lkrg
+</code></pre></div>
+<p>To enable LKRG on bootup please use:</p>
+<div class="highlight"><pre><span></span><code>systemctl enable lkrg
+</code></pre></div>
+<h3 id="testing-and-recovery">Testing and recovery<a class="headerlink" href="#testing-and-recovery" title="Permanent link">&para;</a></h3>
+<p>Although the current package passed our own testing (on 8.8 and 9.2), we recommend that you only enable LKRG to start on system bootup after you've tested it for a while to ensure its compatibility with your system. If you nevertheless run into a boot time issue with LKRG later, you can disable it with the <code>nolkrg</code> kernel command-line option.</p>
 <h3 id="change-log">Change log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>* Sat Oct 07 2023 Solar Designer &lt;solar@openwall.com&gt; 8.7p1-30.el9.security.0.2
-- Load libsystemd.so.0, not libsystemd.so, as the latter is only provided by
-  systemd-devel
+<div class="highlight"><pre><span></span><code>* Wed Nov 08 2023 Solar Designer &lt;solar@openwall.com&gt; 0.9.7-4
+- Add a couple of upstream patches, most notably to fix kINT false positives on
+EL 8.8.
 
-* Mon Aug 28 2023 Solar Designer &lt;solar@openwall.com&gt; 8.7p1-30.el9.security.0.1
-- Instead of linking against libsystemd, load it dynamically in a temporary
-  child process to avoid polluting actual sshd&#39;s address space with that
-  library and its many dependencies (shortens &quot;ldd sshd&quot; from 28 to 20 lines)
+* Tue Oct 24 2023 Solar Designer &lt;solar@openwall.com&gt; 0.9.7-3
+- Use weak-modules if available so that on RHEL and its rebuilds the same LKRG
+  package build works across different kABI-compatible kernel revisions/builds
+- Drop 32-bit x86 from ExclusiveArch since recent RHEL lacks such kernel-devel
+
+* Thu Sep 14 2023 Solar Designer &lt;solar@openwall.com&gt; 0.9.7-2
+- Use kernel build directory corresponding to the kernel-devel package, not to
+the currently running kernel
+- &quot;BuildRequires: kernel&quot; for the /lib/modules/* directory
+- &quot;BuildRequires: elfutils-libelf-devel&quot; to support CONFIG_UNWINDER_ORC=y
+
+* Thu Sep 14 2023 Solar Designer &lt;solar@openwall.com&gt; 0.9.7-1
+- Wrote this rough RPM spec file for Red Hat&#39;ish distros, seems to work fine on
+RHEL 7, 8, 9 rebuilds, but is only reliable when there&#39;s exactly one
+kernel-devel package installed at build time and it exactly matches the target
+kernel version.
 </code></pre></div>
 
   <hr>
@@ -661,7 +696,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 13, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 16, 2023</span>
       
     
   </small>
