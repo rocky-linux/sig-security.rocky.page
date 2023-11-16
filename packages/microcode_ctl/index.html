@@ -534,7 +534,14 @@
     EL9
   </a>
   
-    <nav class="md-nav" aria-label="EL9">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el8" class="md-nav__link">
+    EL8
+  </a>
+  
+    <nav class="md-nav" aria-label="EL8">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -639,13 +646,21 @@
 <h2 id="el9">EL9<a class="headerlink" href="#el9" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Version <code>4:20231114-1.el9_2.security</code></li>
-<li>Based on <code>4:20230808-2</code></li>
+<li>Based on <code>4:20230808-2.el9</code></li>
 </ul>
+<p>This is our custom revision of a post-9.2 EL9 package. We use Intel's latest released microcode.</p>
+<h2 id="el8">EL8<a class="headerlink" href="#el8" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Version <code>4:20230808-2.20231009.1.el8.security</code></li>
+<li>Based on <code>4:20230808-2.20231009.1.el8</code></li>
+</ul>
+<p>This is a rebuild of the 8.9 package as-is to make it available for 8.8. It uses Intel's fixed microcode revision that was provided to distros privately in preparation for the coordinated disclosure.</p>
 <h3 id="changes-summary">Changes summary<a class="headerlink" href="#changes-summary" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Update Intel CPU microcode to microcode-20231114 (fixes <a href="../../issues/CVE-2023-23583/">CVE-2023-23583</a>), temporarily dropping most documentation patches</li>
+<li>Update Intel CPU microcode to fix <a href="../../issues/CVE-2023-23583/">CVE-2023-23583</a>, temporarily dropping most documentation patches</li>
 </ul>
 <h3 id="change-log">Change log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h3>
+<p>For EL9:</p>
 <div class="highlight"><pre><span></span><code>* Tue Nov 14 2023 Solar Designer &lt;solar@openwall.com&gt; - 4:20231114-1
 - Update Intel CPU microcode to microcode-20231114 (fixes CVE-2023-23583),
   temporarily dropping most documentation patches
@@ -656,7 +671,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 15, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 16, 2023</span>
       
     
   </small>

@@ -356,6 +356,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#override-packages-for-el8-and-el9" class="md-nav__link">
+    Override packages (for EL8 and EL9)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#override-packages-currently-only-for-el9" class="md-nav__link">
     Override packages (currently only for EL9)
   </a>
@@ -733,10 +740,13 @@
 <ul>
 <li><a href="packages/hardened_malloc/">hardened_malloc</a> (Security-focused memory allocator providing the malloc API, and a script to preload it into existing program binaries)</li>
 </ul>
+<h3 id="override-packages-for-el8-and-el9">Override packages (for EL8 and EL9)<a class="headerlink" href="#override-packages-for-el8-and-el9" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="packages/microcode_ctl/">microcode_ctl</a> (updates Intel CPU microcode to microcode-20231114, which fixes <a href="issues/CVE-2023-23583/">CVE-2023-23583</a>)</li>
+</ul>
 <h3 id="override-packages-currently-only-for-el9">Override packages (currently only for EL9)<a class="headerlink" href="#override-packages-currently-only-for-el9" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="packages/glibc/">glibc</a> (adds many security-hardening changes originating from Owl and ALT Linux on top of EL package)</li>
-<li><a href="packages/microcode_ctl/">microcode_ctl</a> (updates Intel CPU microcode to microcode-20231114, which fixes <a href="issues/CVE-2023-23583/">CVE-2023-23583</a>)</li>
 <li><a href="packages/openssh/">openssh</a> (fewer shared libraries exposed in sshd processes while otherwise fully matching EL package's functionality)</li>
 </ul>
 <p>The changes are described in more detail on the per-package wiki pages linked above, as well as in the package changelogs.
