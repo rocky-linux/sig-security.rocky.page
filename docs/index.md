@@ -39,7 +39,7 @@ You'll normally install packages from the mirrors, which should just work. Howev
 ### Extra packages (for EL8 and EL9)
 
 - [lkrg](packages/lkrg.md) (Linux Kernel Runtime Guard)
-- [passwdqc](https://www.openwall.com/passwdqc/) (Password/passphrase strength checking and policy enforcement)
+- [passwdqc](packages/passwdqc.md) (Password/passphrase strength checking and policy enforcement)
 
 ### Extra packages (currently only for EL9)
 
