@@ -16,6 +16,8 @@ This is a rebuild of the 8.9 package as-is to make it available for 8.8. It uses
 
 ### Changes summary
 
+For EL9:
+
 - Update Intel CPU microcode to fix [CVE-2023-23583](../issues/CVE-2023-23583.md), temporarily dropping most documentation patches
 
 ### Change log

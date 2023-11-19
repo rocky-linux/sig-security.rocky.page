@@ -47,7 +47,7 @@ You'll normally install packages from the mirrors, which should just work. Howev
 
 ### Override packages (for EL8 and EL9)
 
-- [microcode_ctl](packages/microcode_ctl.md) (updates Intel CPU microcode to microcode-20231114, which fixes [CVE-2023-23583](issues/CVE-2023-23583.md))
+- [microcode_ctl](packages/microcode_ctl.md) (updates Intel CPU microcode to fix [CVE-2023-23583](issues/CVE-2023-23583.md))
 
 ### Override packages (currently only for EL9)
 
