@@ -2,8 +2,8 @@
 
 ## EL9
 
-- Version `2.34-60.7.el9_2.security.0.3`
-- Based on `2.34-60.el9_2.7`
+- Version `2.34-83.7.el9_3.security.0.3`
+- Based on `2.34-83.el9.7`
 
 ### Changes summary
 
@@ -16,36 +16,23 @@
 
 #### Known-effective vulnerability mitigations and fixes
 
-`2.34-60.el9_2.security.0.2` included mitigations sufficient to avoid security exposure of [CVE-2023-4911](../issues/CVE-2023-4911.md) and a backport of upstream glibc fix of [CVE-2023-4527](https://www.openwall.com/lists/oss-security/2023/09/25/1) that was not yet in upstream EL. In the update to `2.34-60.7.el9_2.security.0.3`, we retained the mitigations while rebasing on upstream EL's package with upstream fixes for these vulnerabilities (and more).
+`2.34-60.el9_2.security.0.2` included mitigations sufficient to avoid security exposure of [CVE-2023-4911](../issues/CVE-2023-4911.md) and a backport of upstream glibc fix of [CVE-2023-4527](https://www.openwall.com/lists/oss-security/2023/09/25/1) that was not yet in upstream EL. In the update to `2.34-60.7.el9_2.security.0.3` and beyond, we retained the mitigations while rebasing on upstream EL's package with upstream fixes for these vulnerabilities (and more).
 
 In general, inclusion of additional security fixes will be "reverted" if and when those get included in upstream EL packages that we rebase our changes on.
 
 ### Change log
 
 ```
+* Wed Nov 22 2023 Solar Designer <solar@openwall.com> - 2.34-83.7.el9.security.0.3
+- Rebase on 2.34-83.7, drop "our" CVE-2023-4527 patch in favor of RH's
+  (a similar rebase was made on Oct 6 in 2.34-60.7.el9.security.0.3 for 9.2)
+
+[... upstream changes ...]
+
 * Fri Oct  6 2023 Solar Designer <solar@openwall.com> - 2.34-60.7.el9.security.0.3
 - Rebase on 2.34-60.7, drop "our" CVE-2023-4527 patch in favor of RH's
 
-* Mon Sep 25 2023 Florian Weimer <fweimer@redhat.com> - 2.34-60.7
-- Fix memory leak regression in getaddrinfo (RHEL-2425)
-
-* Tue Sep 19 2023 Carlos O'Donell <carlos@redhat.com> - 2.34-60.6
-- CVE-2023-4911 glibc: buffer overflow in ld.so leading to privilege escalation (RHEL-2999)
-
-* Tue Sep 19 2023 Carlos O'Donell <carlos@redhat.com> - 2.34-60.5
-- Revert: Always call destructors in reverse constructor order (RHEL-3385)
-
-* Mon Sep 18 2023 Siddhesh Poyarekar <siddhesh@redhat.com> - 2.34-60.4
-- CVE-2023-4806 glibc: potential use-after-free in getaddrinfo (RHEL-2425)
-
-* Fri Sep 15 2023 Siddhesh Poyarekar <siddhesh@redhat.com> - 2.34-60.3
-- CVE-2023-4813: potential use-after-free in gaih_inet (RHEL-2437)
-
-* Fri Sep 15 2023 Carlos O'Donell <carlos@redhat.com> - 2.34-60.2
-- CVE-2023-4527: Stack read overflow in getaddrinfo in no-aaaa mode (#2234715)
-
-* Wed Sep 13 2023 Florian Weimer <fweimer@redhat.com> - 2.34-60.1
-- Always call destructors in reverse constructor order (RHEL-3385)
+[... upstream changes ...]
 
 * Mon Oct  2 2023 Solar Designer <solar@openwall.com> - 2.34-60.el9.security.0.2
 - Add glibc-owl-alt-sanitize-env.patch stitched from several ALT Linux commits
