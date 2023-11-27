@@ -1,8 +1,13 @@
 # Extra package: passwdqc
 
-## EL8 and EL9
+## EL9
 
 - Version `2.0.3-2.el9_2.security`
+- Based on upstream version `2.0.3-2` as packaged in Fedora
+
+## EL8
+
+- Version `2.0.3-2.el8.security`
 - Based on upstream version `2.0.3-2` as packaged in Fedora
 
 ### Package summary
@@ -13,7 +18,7 @@ More information is available on the [passwdqc homepage](https://www.openwall.co
 
 ### Usage in Rocky Linux
 
-There are 4 sub-packages:
+There are 5 sub-packages:
 
 #### pam_passwdqc
 
@@ -31,6 +36,10 @@ The `pwqfilter` program searches, creates, or updates binary passphrase filter f
 
 `libpasswdqc` is the underlying library, which may also be used from third-party programs.
 
+#### libpasswdqc-devel
+
+This package contains development files needed for building passwdqc-aware applications, as well as documentation (man pages) for developing such applications.
+
 #### passwdqc
 
-`passwdqc` is a meta sub-package that installs (via dependencies) all 3 actual sub-packages above.
+`passwdqc` is a meta sub-package that installs (via dependencies) the actual sub-packages above, except for `libpasswdqc-devel`.

@@ -1,8 +1,13 @@
 # Extra package: lkrg
 
-## EL8 and EL9
+## EL9
 
-- Version `lkrg-0.9.7-4.el9_2.security`
+- Version `0.9.7-4.el9_3.security`
+- Based on upstream version `0.9.7`
+
+## EL8
+
+- Version `0.9.7-4.el8_9.security`
 - Based on upstream version `0.9.7`
 
 ### Package summary
@@ -13,7 +18,7 @@ More information is available on the [LKRG homepage](https://lkrg.org) and in th
 
 ### Usage in Rocky Linux
 
-Due to EL's kABI stability and the `weak-modules` mechanism, which this package uses, the same binary package of LKRG works across different kernel revisions/builds within the same EL minor release (e.g., 9.2). Once there's a new minor release (e.g., 9.2 is upgraded to 9.3), we'll provide a new build of LKRG accordingly.
+Due to EL's kABI stability and the `weak-modules` mechanism, which this package uses, the same binary package of LKRG works across different kernel revisions/builds within the same EL minor release (e.g., 9.3). Once there's a new minor release (e.g., 9.3 is upgraded to 9.4), we'll provide a new build of LKRG accordingly.
 
 Installing the package does not automatically start LKRG nor enable it to start on system bootup. To start LKRG please use:
 
@@ -29,9 +34,11 @@ systemctl enable lkrg
 
 ### Testing and recovery
 
-Although the current package passed our own testing (on 8.8 and 9.2), we recommend that you only enable LKRG to start on system bootup after you've tested it for a while to ensure its compatibility with your system. If you nevertheless run into a boot time issue with LKRG later, you can disable it with the `nolkrg` kernel command-line option.
+Although the current package passed our own testing (on 9.3 and 8.9), we recommend that you only enable LKRG to start on system bootup after you've tested it for a while to ensure its compatibility with your system. If you nevertheless run into a boot time issue with LKRG later, you can disable it with the `nolkrg` kernel command-line option.
 
 ### Change log
+
+The 0.9.7-4 source package was originally built for (and tested on) 9.2 and 8.8, then rebuilt without source level changes for 9.3 and 8.9 (and re-tested on those versions).
 
 ```
 * Wed Nov 08 2023 Solar Designer <solar@openwall.com> 0.9.7-4
