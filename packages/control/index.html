@@ -10,11 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://sig-security.rocky.page/packages/passwdqc/">
+        <link rel="canonical" href="https://sig-security.rocky.page/packages/control/">
       
       
-        <link rel="prev" href="../openssh/">
+        <link rel="prev" href="../../issues/CVE-2023-4911/">
       
+      
+        <link rel="next" href="../glibc/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>Extra package: passwdqc - SIG/Security Wiki</title>
+        <title>Extra package: control - SIG/Security Wiki</title>
       
     
     
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#extra-package-passwdqc" class="md-skip">
+        <a href="#extra-package-control" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Extra package: passwdqc
+              Extra package: control
             
           </span>
         </div>
@@ -427,10 +429,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../control/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Extra package: control
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -439,6 +461,83 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#el9" class="md-nav__link">
+    <span class="md-ellipsis">
+      EL9
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="EL9">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#package-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-in-rocky-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage in Rocky Linux
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage in Rocky Linux">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#control" class="md-nav__link">
+    <span class="md-ellipsis">
+      control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-shadow" class="md-nav__link">
+    <span class="md-ellipsis">
+      control-shadow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -553,30 +652,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Extra package: passwdqc
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../passwdqc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -585,119 +664,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#el9" class="md-nav__link">
-    <span class="md-ellipsis">
-      EL9
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#el8" class="md-nav__link">
-    <span class="md-ellipsis">
-      EL8
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="EL8">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#package-summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Package summary
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usage-in-rocky-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usage in Rocky Linux
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Usage in Rocky Linux">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pam_passwdqc" class="md-nav__link">
-    <span class="md-ellipsis">
-      pam_passwdqc
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passwdqc-utils" class="md-nav__link">
-    <span class="md-ellipsis">
-      passwdqc-utils
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#libpasswdqc" class="md-nav__link">
-    <span class="md-ellipsis">
-      libpasswdqc
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#libpasswdqc-devel" class="md-nav__link">
-    <span class="md-ellipsis">
-      libpasswdqc-devel
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#passwdqc" class="md-nav__link">
-    <span class="md-ellipsis">
-      passwdqc
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -725,7 +691,7 @@
                   
 
   
-    <a href="https://git.resf.org/security/wiki/_edit/main/docs/packages/passwdqc.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://git.resf.org/security/wiki/_edit/main/docs/packages/control.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -733,34 +699,31 @@
   
 
 
-<h1 id="extra-package-passwdqc">Extra package: passwdqc<a class="headerlink" href="#extra-package-passwdqc" title="Permanent link">&para;</a></h1>
+<h1 id="extra-package-control">Extra package: control<a class="headerlink" href="#extra-package-control" title="Permanent link">&para;</a></h1>
 <h2 id="el9">EL9<a class="headerlink" href="#el9" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Version <code>2.0.3-2.el9_2.security</code></li>
-<li>Based on upstream version <code>2.0.3-2</code> as packaged in Fedora</li>
-</ul>
-<h2 id="el8">EL8<a class="headerlink" href="#el8" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Version <code>2.0.3-2.el8.security</code></li>
-<li>Based on upstream version <code>2.0.3-2</code> as packaged in Fedora</li>
+<li>Version <code>0.8.0-2.el9_3.security</code></li>
 </ul>
 <h3 id="package-summary">Package summary<a class="headerlink" href="#package-summary" title="Permanent link">&para;</a></h3>
-<p><code>passwdqc</code> is a password/passphrase strength checking and policy enforcement toolset, including a PAM module (<code>pam_passwdqc</code>), command-line programs (<code>pwqcheck</code>, <code>pwqfilter</code>, and <code>pwqgen</code>), and a library (<code>libpasswdqc</code>).</p>
-<p>More information is available on the <a href="https://www.openwall.com/passwdqc/">passwdqc homepage</a> and in the documentation files (man pages and a README) included in the sub-packages below.</p>
+<p><code>control</code> provides a common interface to register and control (what it calls) system facilities.
+This is intended primarily for facilities that can potentially be dangerous to system security, to let you enable, disable, or configure each facility.
+A typical facility is a SUID/SGID/setcap program or a configuration setting of a service.</p>
+<p><code>control</code> originates in Owl and is actively maintained in ALT Linux.</p>
 <h3 id="usage-in-rocky-linux">Usage in Rocky Linux<a class="headerlink" href="#usage-in-rocky-linux" title="Permanent link">&para;</a></h3>
-<p>There are 5 sub-packages:</p>
-<h4 id="pam_passwdqc">pam_passwdqc<a class="headerlink" href="#pam_passwdqc" title="Permanent link">&para;</a></h4>
-<p><code>pam_passwdqc</code> is a PAM module that is normally invoked on password changes by programs such as <code>passwd(1)</code>. It is capable of checking password or passphrase strength, enforcing a policy, and offering randomly-generated passphrases, with all of these features being optional and easily (re-)configurable.</p>
-<p>Merely installing this sub-package does not yet configure the system to use the PAM module. To do so, please edit PAM configuration files e.g. like <a href="https://github.com/openwall/passwdqc/issues/19#issuecomment-1140262371">shown here</a>.</p>
-<h4 id="passwdqc-utils">passwdqc-utils<a class="headerlink" href="#passwdqc-utils" title="Permanent link">&para;</a></h4>
-<p><code>pwqcheck</code> and <code>pwqgen</code> are standalone password/passphrase strength checking and random passphrase generator programs, respectively, which are usable from scripts.</p>
-<p>The <code>pwqfilter</code> program searches, creates, or updates binary passphrase filter files, which can also be used with <code>pwqcheck</code> and <code>pam_passwdqc</code>. This can be used for checking of user-provided passwords against existing data breaches, which is recommended in the current NIST guidance, specifically in publication 800-63B sections 5.1.1.2 and A.3. Paid pre-generated filter files are available from Openwall at the project homepage above, but with this tool you can also generate your own.</p>
-<h4 id="libpasswdqc">libpasswdqc<a class="headerlink" href="#libpasswdqc" title="Permanent link">&para;</a></h4>
-<p><code>libpasswdqc</code> is the underlying library, which may also be used from third-party programs.</p>
-<h4 id="libpasswdqc-devel">libpasswdqc-devel<a class="headerlink" href="#libpasswdqc-devel" title="Permanent link">&para;</a></h4>
-<p>This package contains development files needed for building passwdqc-aware applications, as well as documentation (man pages) for developing such applications.</p>
-<h4 id="passwdqc">passwdqc<a class="headerlink" href="#passwdqc" title="Permanent link">&para;</a></h4>
-<p><code>passwdqc</code> is a meta sub-package that installs (via dependencies) the actual sub-packages above, except for <code>libpasswdqc-devel</code>.</p>
+<p>While the original <code>control</code> package in Owl and ALT Linux merely provides the common interface mentioned above for other packages to register their facilities with (and many packages in those distros do), it's been adapted in Rocky Linux to provide its own sub-packages with facility specifications and RPM trigger scripts for other packages coming from EL. This way, we can <code>control</code> those facilities and have custom settings persist (be automatically saved and restored) over package upgrades without us having to maintain forks of those other packages.</p>
+<p>Initially, there are 2 sub-packages:</p>
+<h4 id="control">control<a class="headerlink" href="#control" title="Permanent link">&para;</a></h4>
+<p>The main package providing the common interface, but no facilities of its own.
+Please refer to <code>control(8)</code> man page for command-line usage syntax.</p>
+<h4 id="control-shadow">control-shadow<a class="headerlink" href="#control-shadow" title="Permanent link">&para;</a></h4>
+<p>Facility files corresponding to the <code>shadow-utils</code> package. Currently, these allow to <code>control</code> access to 5 privileged programs (3 of them are by default SUID root and 2 <code>cap_setuid=ep</code>, thus posing risk to system security in case of vulnerabilities in them).</p>
+<div class="highlight"><pre><span></span><code># control
+chage           public          (public restricted)
+gpasswd         public          (public wheelonly restricted)
+newgidmap       public          (public wheelonly restricted)
+newgrp          public          (public wheelonly restricted)
+newuidmap       public          (public wheelonly restricted)
+</code></pre></div>
 
 
 
@@ -781,7 +744,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 25, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 14, 2023</span>
   </span>
 
     
