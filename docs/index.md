@@ -35,11 +35,12 @@ This isn't as secure as checking the package signature would be _if_ you previou
 ### Extra packages (for EL8 and EL9)
 
 - [lkrg](packages/lkrg.md) (Linux Kernel Runtime Guard)
-- [passwdqc](packages/passwdqc.md) (Password/passphrase strength checking and policy enforcement)
+- [passwdqc](packages/passwdqc.md) (password/passphrase strength checking and policy enforcement)
 
 ### Extra packages (currently only for EL9)
 
-- [hardened_malloc](packages/hardened_malloc.md) (Security-focused memory allocator providing the malloc API, and a script to preload it into existing program binaries)
+- [control](packages/control.md) (a common interface to register and control security-relevant system facilities)
+- [hardened_malloc](packages/hardened_malloc.md) (security-focused memory allocator providing the malloc API, and a script to preload it into existing program binaries)
 
 ### Override packages (for EL8 and EL9)
 
