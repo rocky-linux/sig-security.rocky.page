@@ -2,52 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sig-security.rocky.page/</loc>
-         <lastmod>2023-12-14</lastmod>
+         <lastmod>2023-12-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sig-security.rocky.page/issues/CVE-2023-23583/</loc>
-         <lastmod>2023-12-14</lastmod>
+         <lastmod>2023-12-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sig-security.rocky.page/issues/CVE-2023-4911/</loc>
-         <lastmod>2023-12-14</lastmod>
+         <lastmod>2023-12-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sig-security.rocky.page/packages/control/</loc>
-         <lastmod>2023-12-14</lastmod>
+         <lastmod>2023-12-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sig-security.rocky.page/packages/glibc/</loc>
-         <lastmod>2023-12-14</lastmod>
+         <lastmod>2023-12-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sig-security.rocky.page/packages/hardened_malloc/</loc>
-         <lastmod>2023-12-14</lastmod>
+         <lastmod>2023-12-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sig-security.rocky.page/packages/lkrg/</loc>
-         <lastmod>2023-12-14</lastmod>
+         <lastmod>2023-12-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sig-security.rocky.page/packages/microcode_ctl/</loc>
-         <lastmod>2023-12-14</lastmod>
+         <lastmod>2023-12-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sig-security.rocky.page/packages/openssh/</loc>
-         <lastmod>2023-12-14</lastmod>
+         <lastmod>2023-12-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://sig-security.rocky.page/packages/passwdqc/</loc>
-         <lastmod>2023-12-14</lastmod>
+         <lastmod>2023-12-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
