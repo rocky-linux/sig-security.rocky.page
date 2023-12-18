@@ -10,28 +10,28 @@
       
       
       
-        <link rel="canonical" href="https://sig-security.rocky.page/packages/lkrg/">
+        <link rel="canonical" href="https://sig-security.rocky.page/updates/">
       
       
-        <link rel="prev" href="../hardened_malloc/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../microcode_ctl/">
+        <link rel="next" href="../issues/CVE-2023-23583/">
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.2">
     
     
       
-        <title>Extra package: lkrg - SIG/Security Wiki</title>
+        <title>SIG/Security News - SIG/Security Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +50,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#extra-package-lkrg" class="md-skip">
+        <a href="#sigsecurity-news" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +92,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="SIG/Security Wiki" class="md-header__button md-logo" aria-label="SIG/Security Wiki" data-md-component="logo">
+    <a href=".." title="SIG/Security Wiki" class="md-header__button md-logo" aria-label="SIG/Security Wiki" data-md-component="logo">
       
-  <img src="../../assets/icon-white.svg" alt="logo">
+  <img src="../assets/icon-white.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Extra package: lkrg
+              SIG/Security News
             
           </span>
         </div>
@@ -228,9 +228,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="SIG/Security Wiki" class="md-nav__button md-logo" aria-label="SIG/Security Wiki" data-md-component="logo">
+    <a href=".." title="SIG/Security Wiki" class="md-nav__button md-logo" aria-label="SIG/Security Wiki" data-md-component="logo">
       
-  <img src="../../assets/icon-white.svg" alt="logo">
+  <img src="../assets/icon-white.svg" alt="logo">
 
     </a>
     SIG/Security Wiki
@@ -257,7 +257,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -274,10 +274,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../updates/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SIG/Security News
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -286,6 +306,107 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#december-18-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      December 18, 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#december-14-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      December 14, 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#november-25-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      November 25, 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#november-16-to-19-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      November 16 to 19, 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#november-16-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      November 16, 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#november-15-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      November 15, 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#october-31-to-november-15-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      October 31 to November 15, 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#october-13-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      October 13, 2023
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#october-3-2023" class="md-nav__link">
+    <span class="md-ellipsis">
+      October 3, 2023
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -345,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../issues/CVE-2023-23583/" class="md-nav__link">
+      <a href="../issues/CVE-2023-23583/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -366,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../issues/CVE-2023-4911/" class="md-nav__link">
+      <a href="../issues/CVE-2023-4911/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -391,10 +512,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -419,12 +538,14 @@
       
       
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
@@ -438,7 +559,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             Packages
@@ -452,7 +573,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../control/" class="md-nav__link">
+      <a href="../packages/control/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -473,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../glibc/" class="md-nav__link">
+      <a href="../packages/glibc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -494,7 +615,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../hardened_malloc/" class="md-nav__link">
+      <a href="../packages/hardened_malloc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -512,30 +633,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Extra package: lkrg
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../packages/lkrg/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -544,86 +645,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#el9" class="md-nav__link">
-    <span class="md-ellipsis">
-      EL9
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#el8" class="md-nav__link">
-    <span class="md-ellipsis">
-      EL8
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="EL8">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#package-summary" class="md-nav__link">
-    <span class="md-ellipsis">
-      Package summary
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#usage-in-rocky-linux" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usage in Rocky Linux
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#testing-and-recovery" class="md-nav__link">
-    <span class="md-ellipsis">
-      Testing and recovery
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#change-log" class="md-nav__link">
-    <span class="md-ellipsis">
-      Change log
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -636,7 +657,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../microcode_ctl/" class="md-nav__link">
+      <a href="../packages/microcode_ctl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -657,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../openssh/" class="md-nav__link">
+      <a href="../packages/openssh/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -678,7 +699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../passwdqc/" class="md-nav__link">
+      <a href="../packages/passwdqc/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -714,7 +735,7 @@
                   
 
   
-    <a href="https://git.resf.org/security/wiki/_edit/main/docs/packages/lkrg.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://git.resf.org/security/wiki/_edit/main/docs/updates.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -722,53 +743,34 @@
   
 
 
-<h1 id="extra-package-lkrg">Extra package: lkrg<a class="headerlink" href="#extra-package-lkrg" title="Permanent link">&para;</a></h1>
-<h2 id="el9">EL9<a class="headerlink" href="#el9" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Version <code>0.9.7-4.el9_3.security</code></li>
-<li>Based on upstream version <code>0.9.7</code></li>
-</ul>
-<h2 id="el8">EL8<a class="headerlink" href="#el8" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Version <code>0.9.7-4.el8_9.security</code></li>
-<li>Based on upstream version <code>0.9.7</code></li>
-</ul>
-<h3 id="package-summary">Package summary<a class="headerlink" href="#package-summary" title="Permanent link">&para;</a></h3>
-<p>LKRG, or Linux Kernel Runtime Guard, is a kernel module that performs runtime integrity checking of the Linux kernel and detection of security vulnerability exploits against the kernel.</p>
-<p>More information is available on the <a href="https://lkrg.org">LKRG homepage</a> and in the documentation files included in the package.</p>
-<h3 id="usage-in-rocky-linux">Usage in Rocky Linux<a class="headerlink" href="#usage-in-rocky-linux" title="Permanent link">&para;</a></h3>
-<p>Due to EL's kABI stability and the <code>weak-modules</code> mechanism, which this package uses, the same binary package of LKRG works across different kernel revisions/builds within the same EL minor release (e.g., 9.3). Once there's a new minor release (e.g., 9.3 is upgraded to 9.4), we'll provide a new build of LKRG accordingly.</p>
-<p>Installing the package does not automatically start LKRG nor enable it to start on system bootup. To start LKRG please use:</p>
-<div class="highlight"><pre><span></span><code>systemctl start lkrg
-</code></pre></div>
-<p>To enable LKRG on bootup please use:</p>
-<div class="highlight"><pre><span></span><code>systemctl enable lkrg
-</code></pre></div>
-<h3 id="testing-and-recovery">Testing and recovery<a class="headerlink" href="#testing-and-recovery" title="Permanent link">&para;</a></h3>
-<p>Although the current package passed our own testing (on 9.3 and 8.9), we recommend that you only enable LKRG to start on system bootup after you've tested it for a while to ensure its compatibility with your system. If you nevertheless run into a boot time issue with LKRG later, you can disable it with the <code>nolkrg</code> kernel command-line option.</p>
-<h3 id="change-log">Change log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h3>
-<p>The 0.9.7-4 source package was originally built for (and tested on) 9.2 and 8.8, then rebuilt without source level changes for 9.3 and 8.9 (and re-tested on those versions).</p>
-<div class="highlight"><pre><span></span><code>* Wed Nov 08 2023 Solar Designer &lt;solar@openwall.com&gt; 0.9.7-4
-- Add a couple of upstream patches, most notably to fix kINT false positives on
-EL 8.8.
-
-* Tue Oct 24 2023 Solar Designer &lt;solar@openwall.com&gt; 0.9.7-3
-- Use weak-modules if available so that on RHEL and its rebuilds the same LKRG
-  package build works across different kABI-compatible kernel revisions/builds
-- Drop 32-bit x86 from ExclusiveArch since recent RHEL lacks such kernel-devel
-
-* Thu Sep 14 2023 Solar Designer &lt;solar@openwall.com&gt; 0.9.7-2
-- Use kernel build directory corresponding to the kernel-devel package, not to
-the currently running kernel
-- &quot;BuildRequires: kernel&quot; for the /lib/modules/* directory
-- &quot;BuildRequires: elfutils-libelf-devel&quot; to support CONFIG_UNWINDER_ORC=y
-
-* Thu Sep 14 2023 Solar Designer &lt;solar@openwall.com&gt; 0.9.7-1
-- Wrote this rough RPM spec file for Red Hat&#39;ish distros, seems to work fine on
-RHEL 7, 8, 9 rebuilds, but is only reliable when there&#39;s exactly one
-kernel-devel package installed at build time and it exactly matches the target
-kernel version.
-</code></pre></div>
+<h1 id="sigsecurity-news">SIG/Security News<a class="headerlink" href="#sigsecurity-news" title="Permanent link">&para;</a></h1>
+<p>These are what we consider significant SIG/Security news items, not an exhaustive list of package updates and wiki edits.</p>
+<h2 id="december-18-2023">December 18, 2023<a class="headerlink" href="#december-18-2023" title="Permanent link">&para;</a></h2>
+<p>This SIG/Security News wiki page has been created, retroactively identifying and listing selected news items so far.</p>
+<p><a href="../packages/control/">control</a> <code>0.8.0-4</code> can now manage 3 privileged programs from <code>util-linux</code> (and <code>util-linux-core</code>): <code>mount</code>, <code>umount</code> (one "facility" for both), and <code>write</code>. Its wiki page has been reworked.</p>
+<h2 id="december-14-2023">December 14, 2023<a class="headerlink" href="#december-14-2023" title="Permanent link">&para;</a></h2>
+<p><a href="../packages/control/">control</a> wiki page added, documenting the new package.</p>
+<p><code>control</code> provides a common interface to register and control (what it calls) system facilities.
+This is intended primarily for facilities that can potentially be dangerous to system security, to let you enable, disable, or configure each facility.
+A typical facility is a SUID/SGID/setcap program or a configuration setting of a service.</p>
+<p>Included initially are facility specifications corresponding to the <code>shadow-utils</code> package. Currently, these allow to <code>control</code> access to 5 privileged programs - 3 of them (<code>chage</code>, <code>gpasswd</code>, and <code>newgrp</code>) are by default SUID root and 2 (<code>newuidmap</code> and <code>newgidmap</code>) are <code>cap_setuid=ep</code>.</p>
+<h2 id="november-25-2023">November 25, 2023<a class="headerlink" href="#november-25-2023" title="Permanent link">&para;</a></h2>
+<p>Everything we had so far has been updated for EL 9.3 and 8.9, including our hardened EL9 <a href="../packages/glibc/">glibc</a> and <a href="../packages/openssh/">openssh</a> packages rebased on 9.3's and <a href="../packages/lkrg/">lkrg</a> rebuilt for 9.3's and 8.9's kernels, along with re-testing and wiki edits.</p>
+<p>The <code>rocky-release-security</code> package containing our repository configuration has been made (a while earlier) easier to use on EL distros other than Rocky Linux, and we've now updated the wiki accordingly.</p>
+<h2 id="november-16-to-19-2023">November 16 to 19, 2023<a class="headerlink" href="#november-16-to-19-2023" title="Permanent link">&para;</a></h2>
+<p><a href="../packages/microcode_ctl/">microcode_ctl</a> also for EL8, providing 8.9's Intel CPU microcode to fix <a href="../issues/CVE-2023-23583/">CVE-2023-23583</a> a few days before general availability of our own 8.9 release as a whole.</p>
+<h2 id="november-16-2023">November 16, 2023<a class="headerlink" href="#november-16-2023" title="Permanent link">&para;</a></h2>
+<p>Wiki pages <a href="../packages/lkrg/">lkrg</a> and <a href="../packages/passwdqc/">passwdqc</a> have been created. We had these extra packages for a while, but previously only had wiki pages for override packages (referring solely to upstream homepages for the extra packages).</p>
+<h2 id="november-15-2023">November 15, 2023<a class="headerlink" href="#november-15-2023" title="Permanent link">&para;</a></h2>
+<p>We've started maintaining wiki pages for selected high profile security issues, initially for glibc <a href="../issues/CVE-2023-4911/">CVE-2023-4911</a> and Intel CPU microcode <a href="../issues/CVE-2023-23583/">CVE-2023-23583</a>.</p>
+<p><a href="../packages/microcode_ctl/">microcode_ctl</a> for EL9, providing latest Intel CPU microcode to fix <a href="../issues/CVE-2023-23583/">CVE-2023-23583</a> ahead of availability of a rebuilt new upstream package.</p>
+<h2 id="october-31-to-november-15-2023">October 31 to November 15, 2023<a class="headerlink" href="#october-31-to-november-15-2023" title="Permanent link">&para;</a></h2>
+<p><a href="../packages/hardened_malloc/">hardened_malloc</a> package - a security-focused memory allocator providing the <code>malloc(3)</code> API, and a script to preload it into existing program binaries. Its documentation on the wiki.</p>
+<h2 id="october-13-2023">October 13, 2023<a class="headerlink" href="#october-13-2023" title="Permanent link">&para;</a></h2>
+<p>We've started maintaining per-package wiki pages, initially for the override packages of <a href="../packages/glibc/">glibc</a> and <a href="../packages/openssh/">openssh</a>.</p>
+<p>We've added instructions for installation of Rocky Linux SIG/Security repository on other EL distros (non-Rocky).</p>
+<h2 id="october-3-2023">October 3, 2023<a class="headerlink" href="#october-3-2023" title="Permanent link">&para;</a></h2>
+<p>Initial wiki content documenting what we had so far, which included override packages of <a href="../packages/glibc/">glibc</a> and <a href="../packages/openssh/">openssh</a> and extra packages of <a href="../packages/lkrg/">lkrg</a> and <a href="../packages/passwdqc/">passwdqc</a> (even though these per-package wiki pages did not exist yet, so we instead had summaries and external links on the front page only), the repository package, <a href="https://git.rockylinux.org/sig/security/src">source code repositories</a>, and <a href="https://chat.rockylinux.org/rocky-linux/channels/security">Mattermost channel</a>.</p>
 
 
 
@@ -789,7 +791,7 @@ kernel version.
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 25, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 18, 2023</span>
   </span>
 
     
@@ -846,10 +848,10 @@ kernel version.
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.path", "search.highlight", "search.suggest", "toc.integrate", "content.action.edit"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.path", "search.highlight", "search.suggest", "toc.integrate", "content.action.edit"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
       
     
   </body>
