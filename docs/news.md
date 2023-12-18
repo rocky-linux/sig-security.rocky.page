@@ -1,4 +1,4 @@
-# SIG/Security News
+# News
 
 These are what we consider significant SIG/Security news items, not an exhaustive list of package updates and wiki edits.
 

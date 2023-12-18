@@ -2,6 +2,8 @@
 
 The Security SIG repositories provide extra security-related packages and security-hardened override packages (replacing those from the main distribution) for Rocky Linux and other Enterprise Linux (EL) distributions.
 
+If you've been to this wiki before, you'll likely want to check out [what's new](news).
+
 ## Responsibilities
 
 Developing and maintaining various security related packages that are not in upstream EL. Identifying, developing, and maintaining security hardening changes relative to upstream EL packages. Occasionally including/backporting additional security fixes that are not yet in upstream EL packages. Contributing to the respective upstreams where practical.
