@@ -24,7 +24,7 @@ There are 5 sub-packages:
 
 `pam_passwdqc` is a PAM module that is normally invoked on password changes by programs such as `passwd(1)`. It is capable of checking password or passphrase strength, enforcing a policy, and offering randomly-generated passphrases, with all of these features being optional and easily (re-)configurable.
 
-Merely installing this sub-package does not yet configure the system to use the PAM module. To do so, please edit PAM configuration files e.g. like [shown here](https://github.com/openwall/passwdqc/issues/19#issuecomment-1140262371).
+Merely installing this sub-package does not yet configure the system to use the PAM module. To do so, on EL9 use our [control](control.md), or on either EL8 or EL9 you may edit PAM configuration files manually e.g. like [shown here](https://github.com/openwall/passwdqc/issues/19#issuecomment-1140262371).
 
 #### passwdqc-utils
 

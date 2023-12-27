@@ -2,6 +2,10 @@
 
 These are what we consider significant SIG/Security news items, not an exhaustive list of package updates and wiki edits.
 
+## December 27, 2023
+
+[control](packages/control.md) `0.8.0-5` can now manage user password hashing scheme and password policy in use by PAM-aware programs.
+
 ## December 18, 2023
 
 This SIG/Security News wiki page has been created, retroactively identifying and listing selected news items so far.
