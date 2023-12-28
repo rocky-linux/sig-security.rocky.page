@@ -2,7 +2,7 @@
 
 ## EL9
 
-- Version `0.8.0-4.el9_3.security`
+- Version `0.8.0-5.el9_3.security`
 
 ### Package summary
 
@@ -17,7 +17,7 @@ We manage permissions on SUID/SGID/setcap programs because those programs pose r
 
 While the original `control` package in Owl and ALT Linux merely provides the common interface mentioned above for other packages to register their facilities with (and many packages in those distros do), it's been adapted in Rocky Linux to provide its own sub-packages with facility specifications and RPM trigger scripts for other packages coming from EL. This way, we can `control` those facilities and have custom settings persist (be automatically saved and restored) over package upgrades without us having to maintain forks of those other packages.
 
-The available facilities, their current settings, and lists of possible settings can be queried by running the `control` command without parameters. With all currently available sub-packages installed, its output may be:
+The available facilities, their current settings, and lists of possible settings can be queried by running the `control` command without parameters. With all currently available sub-packages installed and upstream default settings, its output is:
 
 ```
 chage           public          (public restricted)
@@ -26,7 +26,23 @@ mount           public          (public wheelonly unprivileged restricted)
 newgidmap       public          (public wheelonly restricted)
 newgrp          public          (public wheelonly restricted)
 newuidmap       public          (public wheelonly restricted)
+password-hash   sha512crypt     (sha512crypt yescrypt)
+password-policy pwquality       (pwquality passwdqc)
 write           public          (public restricted)
+```
+
+With maximum security hardening, it changes to:
+
+```
+chage           restricted      (public restricted)
+gpasswd         restricted      (public wheelonly restricted)
+mount           restricted      (public wheelonly unprivileged restricted)
+newgidmap       restricted      (public wheelonly restricted)
+newgrp          restricted      (public wheelonly restricted)
+newuidmap       restricted      (public wheelonly restricted)
+password-hash   yescrypt        (sha512crypt yescrypt)
+password-policy passwdqc        (pwquality passwdqc)
+write           restricted      (public restricted)
 ```
 
 The default settings (typically `public`) correspond to EL packages' defaults (and are typically the most relaxed security-wise).
@@ -49,9 +65,18 @@ Facility specifications corresponding to the `shadow-utils` package. Currently, 
 
 Facility specifications corresponding to the `util-linux` and `util-linux-core` packages. Currently, these allow to `control` access to 3 privileged programs - 2 of them (`mount` and `umount`) are by default SUID root and 1 (`write`) SGID `tty`.
 
+#### control-pam
+
+Facility specifications corresponding to the `pam` package. Currently, these allow to `control` user password hashing scheme and password policy in use by PAM-aware programs.
+
 ### Change log
 
 ```
+* Wed Dec 27 2023 Solar Designer <solar@openwall.com> 0.8.0-5
+- Install control(8) mode 755 since some of its features work as non-root
+- Add sub-package with facilities and triggers for pam password hashing and
+  password policy
+
 * Mon Dec 18 2023 Solar Designer <solar@openwall.com> 0.8.0-4
 - Add sub-package with facilities and triggers for util-linux
 
