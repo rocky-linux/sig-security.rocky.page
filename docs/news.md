@@ -2,6 +2,10 @@
 
 These are what we consider significant SIG/Security news items, not an exhaustive list of package updates and wiki edits.
 
+## January 3, 2024
+
+[control](packages/control.md) `0.8.0-7` can now manage two SUID root PAM helper programs `unix_chkpwd` and `pam_timestamp_check`.
+
 ## December 27, 2023
 
 [control](packages/control.md) `0.8.0-5` can now manage user password hashing scheme and password policy in use by PAM-aware programs.
