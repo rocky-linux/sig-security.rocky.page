@@ -2,7 +2,7 @@
 
 ## EL9
 
-- Version `0.8.0-5.el9_3.security`
+- Version `0.8.0-7.el9_3.security`
 
 ### Package summary
 
@@ -20,38 +20,40 @@ While the original `control` package in Owl and ALT Linux merely provides the co
 The available facilities, their current settings, and lists of possible settings can be queried by running the `control` command without parameters. With all currently available sub-packages installed and upstream default settings, its output is:
 
 ```
-chage           public          (public restricted)
-gpasswd         public          (public wheelonly restricted)
-mount           public          (public wheelonly unprivileged restricted)
-newgidmap       public          (public wheelonly restricted)
-newgrp          public          (public wheelonly restricted)
-newuidmap       public          (public wheelonly restricted)
-password-hash   sha512crypt     (sha512crypt yescrypt)
-password-policy pwquality       (pwquality passwdqc)
-write           public          (public restricted)
+chage               public        (public restricted)
+gpasswd             public        (public wheelonly restricted)
+mount               public        (public wheelonly unprivileged restricted)
+newgidmap           public        (public wheelonly restricted)
+newgrp              public        (public wheelonly restricted)
+newuidmap           public        (public wheelonly restricted)
+pam_timestamp_check public        (public restricted)
+password-hash       sha512crypt   (sha512crypt yescrypt)
+password-policy     pwquality     (pwquality passwdqc)
+unix_chkpwd         public        (public restricted)
+write               public        (public restricted)
 ```
 
 With maximum security hardening, it changes to:
 
 ```
-chage           restricted      (public restricted)
-gpasswd         restricted      (public wheelonly restricted)
-mount           restricted      (public wheelonly unprivileged restricted)
-newgidmap       restricted      (public wheelonly restricted)
-newgrp          restricted      (public wheelonly restricted)
-newuidmap       restricted      (public wheelonly restricted)
-password-hash   yescrypt        (sha512crypt yescrypt)
-password-policy passwdqc        (pwquality passwdqc)
-write           restricted      (public restricted)
+chage               restricted    (public restricted)
+gpasswd             restricted    (public wheelonly restricted)
+mount               restricted    (public wheelonly unprivileged restricted)
+newgidmap           restricted    (public wheelonly restricted)
+newgrp              restricted    (public wheelonly restricted)
+newuidmap           restricted    (public wheelonly restricted)
+pam_timestamp_check restricted    (public restricted)
+password-hash       yescrypt      (sha512crypt yescrypt)
+password-policy     passwdqc      (pwquality passwdqc)
+unix_chkpwd         restricted    (public restricted)
+write               restricted    (public restricted)
 ```
-
-The default settings (typically `public`) correspond to EL packages' defaults (and are typically the most relaxed security-wise).
 
 Please refer to `control(8)` man page for command-line usage syntax.
 
 ### Sub-packages
 
-Currently, there are 3 sub-packages:
+Currently, there are 4 sub-packages:
 
 #### control
 
@@ -67,11 +69,20 @@ Facility specifications corresponding to the `util-linux` and `util-linux-core` 
 
 #### control-pam
 
-Facility specifications corresponding to the `pam` package. Currently, these allow to `control` user password hashing scheme and password policy in use by PAM-aware programs.
+Facility specifications corresponding to the `pam` package. Currently, these allow to `control` user password hashing scheme and password policy in use by PAM-aware programs, as well as two SUID root PAM helper programs `unix_chkpwd` and `pam_timestamp_check`.
 
 ### Change log
 
 ```
+* Wed Jan  3 2024 Solar Designer <solar@openwall.com> 0.8.0-7
+- Add unix_chkpwd and pam_timestamp_check facilities to the pam sub-package
+
+* Wed Jan  3 2024 Solar Designer <solar@openwall.com> 0.8.0-6
+- Revise password-hash and password-policy to process the underlying two
+  "sub-facilities" (for the two configuration files updated by each of these)
+  using the same logic that we had used for mount (where the two underlying
+  "sub-facilities" are the mount and umount programs)
+
 * Wed Dec 27 2023 Solar Designer <solar@openwall.com> 0.8.0-5
 - Install control(8) mode 755 since some of its features work as non-root
 - Add sub-package with facilities and triggers for pam password hashing and
@@ -87,7 +98,7 @@ Facility specifications corresponding to the `pam` package. Currently, these all
 
 * Wed Dec 13 2023 Solar Designer <solar@openwall.com> 0.8.0-2
 - In addition to Requires(pre), also use Requires in the sub-package
-- In %%triggerprein_control, pre-check that the facility exists
+- In %triggerprein_control, pre-check that the facility exists
 - Use (renamed) copies of the trigger macros within this spec file
 
 * Wed Dec 13 2023 Solar Designer <solar@openwall.com> 0.8.0-1
