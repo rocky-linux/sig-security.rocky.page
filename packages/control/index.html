@@ -758,7 +758,7 @@
 <h1 id="extra-package-control">Extra package: control<a class="headerlink" href="#extra-package-control" title="Permanent link">&para;</a></h1>
 <h2 id="el9">EL9<a class="headerlink" href="#el9" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Version <code>0.8.0-5.el9_3.security</code></li>
+<li>Version <code>0.8.0-7.el9_3.security</code></li>
 </ul>
 <h3 id="package-summary">Package summary<a class="headerlink" href="#package-summary" title="Permanent link">&para;</a></h3>
 <p><code>control</code> provides a common interface to register and control (what it calls) system facilities.
@@ -769,31 +769,34 @@ We manage permissions on SUID/SGID/setcap programs because those programs pose r
 <h3 id="usage-in-rocky-linux">Usage in Rocky Linux<a class="headerlink" href="#usage-in-rocky-linux" title="Permanent link">&para;</a></h3>
 <p>While the original <code>control</code> package in Owl and ALT Linux merely provides the common interface mentioned above for other packages to register their facilities with (and many packages in those distros do), it's been adapted in Rocky Linux to provide its own sub-packages with facility specifications and RPM trigger scripts for other packages coming from EL. This way, we can <code>control</code> those facilities and have custom settings persist (be automatically saved and restored) over package upgrades without us having to maintain forks of those other packages.</p>
 <p>The available facilities, their current settings, and lists of possible settings can be queried by running the <code>control</code> command without parameters. With all currently available sub-packages installed and upstream default settings, its output is:</p>
-<div class="highlight"><pre><span></span><code>chage           public          (public restricted)
-gpasswd         public          (public wheelonly restricted)
-mount           public          (public wheelonly unprivileged restricted)
-newgidmap       public          (public wheelonly restricted)
-newgrp          public          (public wheelonly restricted)
-newuidmap       public          (public wheelonly restricted)
-password-hash   sha512crypt     (sha512crypt yescrypt)
-password-policy pwquality       (pwquality passwdqc)
-write           public          (public restricted)
+<div class="highlight"><pre><span></span><code>chage               public        (public restricted)
+gpasswd             public        (public wheelonly restricted)
+mount               public        (public wheelonly unprivileged restricted)
+newgidmap           public        (public wheelonly restricted)
+newgrp              public        (public wheelonly restricted)
+newuidmap           public        (public wheelonly restricted)
+pam_timestamp_check public        (public restricted)
+password-hash       sha512crypt   (sha512crypt yescrypt)
+password-policy     pwquality     (pwquality passwdqc)
+unix_chkpwd         public        (public restricted)
+write               public        (public restricted)
 </code></pre></div>
 <p>With maximum security hardening, it changes to:</p>
-<div class="highlight"><pre><span></span><code>chage           restricted      (public restricted)
-gpasswd         restricted      (public wheelonly restricted)
-mount           restricted      (public wheelonly unprivileged restricted)
-newgidmap       restricted      (public wheelonly restricted)
-newgrp          restricted      (public wheelonly restricted)
-newuidmap       restricted      (public wheelonly restricted)
-password-hash   yescrypt        (sha512crypt yescrypt)
-password-policy passwdqc        (pwquality passwdqc)
-write           restricted      (public restricted)
+<div class="highlight"><pre><span></span><code>chage               restricted    (public restricted)
+gpasswd             restricted    (public wheelonly restricted)
+mount               restricted    (public wheelonly unprivileged restricted)
+newgidmap           restricted    (public wheelonly restricted)
+newgrp              restricted    (public wheelonly restricted)
+newuidmap           restricted    (public wheelonly restricted)
+pam_timestamp_check restricted    (public restricted)
+password-hash       yescrypt      (sha512crypt yescrypt)
+password-policy     passwdqc      (pwquality passwdqc)
+unix_chkpwd         restricted    (public restricted)
+write               restricted    (public restricted)
 </code></pre></div>
-<p>The default settings (typically <code>public</code>) correspond to EL packages' defaults (and are typically the most relaxed security-wise).</p>
 <p>Please refer to <code>control(8)</code> man page for command-line usage syntax.</p>
 <h3 id="sub-packages">Sub-packages<a class="headerlink" href="#sub-packages" title="Permanent link">&para;</a></h3>
-<p>Currently, there are 3 sub-packages:</p>
+<p>Currently, there are 4 sub-packages:</p>
 <h4 id="control">control<a class="headerlink" href="#control" title="Permanent link">&para;</a></h4>
 <p>The main package providing the common interface, but no facilities of its own.</p>
 <h4 id="control-shadow-utils">control-shadow-utils<a class="headerlink" href="#control-shadow-utils" title="Permanent link">&para;</a></h4>
@@ -801,9 +804,18 @@ write           restricted      (public restricted)
 <h4 id="control-util-linux">control-util-linux<a class="headerlink" href="#control-util-linux" title="Permanent link">&para;</a></h4>
 <p>Facility specifications corresponding to the <code>util-linux</code> and <code>util-linux-core</code> packages. Currently, these allow to <code>control</code> access to 3 privileged programs - 2 of them (<code>mount</code> and <code>umount</code>) are by default SUID root and 1 (<code>write</code>) SGID <code>tty</code>.</p>
 <h4 id="control-pam">control-pam<a class="headerlink" href="#control-pam" title="Permanent link">&para;</a></h4>
-<p>Facility specifications corresponding to the <code>pam</code> package. Currently, these allow to <code>control</code> user password hashing scheme and password policy in use by PAM-aware programs.</p>
+<p>Facility specifications corresponding to the <code>pam</code> package. Currently, these allow to <code>control</code> user password hashing scheme and password policy in use by PAM-aware programs, as well as two SUID root PAM helper programs <code>unix_chkpwd</code> and <code>pam_timestamp_check</code>.</p>
 <h3 id="change-log">Change log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>* Wed Dec 27 2023 Solar Designer &lt;solar@openwall.com&gt; 0.8.0-5
+<div class="highlight"><pre><span></span><code>* Wed Jan  3 2024 Solar Designer &lt;solar@openwall.com&gt; 0.8.0-7
+- Add unix_chkpwd and pam_timestamp_check facilities to the pam sub-package
+
+* Wed Jan  3 2024 Solar Designer &lt;solar@openwall.com&gt; 0.8.0-6
+- Revise password-hash and password-policy to process the underlying two
+  &quot;sub-facilities&quot; (for the two configuration files updated by each of these)
+  using the same logic that we had used for mount (where the two underlying
+  &quot;sub-facilities&quot; are the mount and umount programs)
+
+* Wed Dec 27 2023 Solar Designer &lt;solar@openwall.com&gt; 0.8.0-5
 - Install control(8) mode 755 since some of its features work as non-root
 - Add sub-package with facilities and triggers for pam password hashing and
   password policy
@@ -818,7 +830,7 @@ write           restricted      (public restricted)
 
 * Wed Dec 13 2023 Solar Designer &lt;solar@openwall.com&gt; 0.8.0-2
 - In addition to Requires(pre), also use Requires in the sub-package
-- In %%triggerprein_control, pre-check that the facility exists
+- In %triggerprein_control, pre-check that the facility exists
 - Use (renamed) copies of the trigger macros within this spec file
 
 * Wed Dec 13 2023 Solar Designer &lt;solar@openwall.com&gt; 0.8.0-1
@@ -848,7 +860,7 @@ write           restricted      (public restricted)
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">December 27, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 3, 2024</span>
   </span>
 
     
