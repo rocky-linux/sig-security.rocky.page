@@ -2,6 +2,10 @@
 
 These are what we consider significant SIG/Security news items, not an exhaustive list of package updates and wiki edits.
 
+## January 31, 2024
+
+Further EL9 [glibc](packages/glibc.md) security hardening in response to the [recent](https://www.openwall.com/lists/oss-security/2024/01/30/6) [findings](https://www.openwall.com/lists/oss-security/2024/01/30/7) by Qualys.
+
 ## January 3, 2024
 
 [control](packages/control.md) `0.8.0-7` can now manage two SUID root PAM helper programs `unix_chkpwd` and `pam_timestamp_check`.

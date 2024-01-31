@@ -2,17 +2,18 @@
 
 ## EL9
 
-- Version `2.34-83.7.el9_3.security.0.3`
+- Version `2.34-83.7.el9_3.security.0.4`
 - Based on `2.34-83.el9.7`
 
 ### Changes summary
 
 - Distrust and/or unset many more environment variables used by current and previous glibc versions when running SUID/SGID/setcap (Owl via ALT Linux)
-- When `syslog(3)`/`vsyslog(3)` is called by a SUID/SGID/setcap program without a preceding call to `openlog(3)`, don't blindly trust `__progname` for the syslog ident (Owl via ALT Linux)
+- When `syslog(3)`/`vsyslog(3)` is called by a SUID/SGID/setcap program without a preceding call to `openlog(3)`, don't blindly trust `__progname` for the syslog ident (Owl via ALT Linux, further revised for Rocky Linux)
 - In `syslog(3)/vsyslog(3)` use `asctime_r(3)+localtime_r(3)` instead of `strftime_r()` so that month names don't depend on current locale settings (Owl via ALT Linux)
 - In `asprintf(3)/vasprintf(3)` reset the pointer to NULL on error, like BSDs do, so that the caller wouldn't access memory over an uninitialized or stale pointer (ALT Linux)
 - In `fread(3)/fwrite(3)` check for potential integer overflow (ALT Linux)
 - In `tmpfile(3)` use the `TMPDIR` environment variable (when not running SUID/SGID/setcap) (ALT Linux)
+- When `qsort(3)` is wrongly used with a nontransitive comparison function, nevertheless be robust and avoid [memory corruption](https://www.openwall.com/lists/oss-security/2024/01/30/7) (Qualys, Rocky Linux)
 
 #### Known-effective vulnerability mitigations and fixes
 
@@ -23,6 +24,14 @@ In general, inclusion of additional security fixes will be "reverted" if and whe
 ### Change log
 
 ```
+* Wed Jan 31 2024 Solar Designer <solar@openwall.com> - 2.34-83.7.el9.security.0.4
+- Harden syslog ident fallback initialization to use at most 64 characters of
+  __progname when __libc_enable_secure, as inspired by Qualys' discovery of
+  related vulnerabilities in newer glibc (not yet present in this version):
+  https://www.openwall.com/lists/oss-security/2024/01/30/6
+- Harden qsort against nontransitive comparison functions as suggested by
+  Qualys: https://www.openwall.com/lists/oss-security/2024/01/30/7
+
 * Wed Nov 22 2023 Solar Designer <solar@openwall.com> - 2.34-83.7.el9.security.0.3
 - Rebase on 2.34-83.7, drop "our" CVE-2023-4527 patch in favor of RH's
   (a similar rebase was made on Oct 6 in 2.34-60.7.el9.security.0.3 for 9.2)
