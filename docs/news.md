@@ -2,6 +2,10 @@
 
 These are what we consider significant SIG/Security news items, not an exhaustive list of package updates and wiki edits.
 
+## February 28, 2024
+
+[lkrg](packages/lkrg.md) updated to version 0.9.8, which adds a remote kernel message logging capability.
+
 ## January 31, 2024
 
 Further EL9 [glibc](packages/glibc.md) security hardening in response to the [recent](https://www.openwall.com/lists/oss-security/2024/01/30/6) [findings](https://www.openwall.com/lists/oss-security/2024/01/30/7) by Qualys.
