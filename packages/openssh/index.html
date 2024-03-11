@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.11">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
     
     
       
@@ -698,15 +698,20 @@
 <h1 id="override-package-openssh">Override package: openssh<a class="headerlink" href="#override-package-openssh" title="Permanent link">&para;</a></h1>
 <h2 id="el9">EL9<a class="headerlink" href="#el9" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Version <code>8.7p1-34.el9_3.security.0.1</code></li>
-<li>Based on <code>8.7p1-34.el9</code></li>
+<li>Version <code>8.7p1-34.3.el9_3.security.0.2</code></li>
+<li>Based on <code>8.7p1-34.el9_3.3</code></li>
 </ul>
 <h3 id="changes-summary">Changes summary<a class="headerlink" href="#changes-summary" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Instead of linking against <code>libsystemd</code>, load it dynamically in a temporary child process to avoid polluting actual <code>sshd</code>'s address space with that library and its many dependencies (shortens <code>ldd sshd</code> output from 28 to 20 lines)</li>
+<li>Build without Kerberos support (further shortens <code>ldd sshd</code> from 20 to 13 lines)</li>
 </ul>
 <h3 id="change-log">Change log<a class="headerlink" href="#change-log" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>* Wed Nov 22 2023 Solar Designer &lt;solar@openwall.com&gt; 8.7p1-34.el9_3.security.0.1
+<div class="highlight"><pre><span></span><code>* Mon Mar 11 2024 Solar Designer &lt;solar@openwall.com&gt; 8.7p1-34.3.el9_3.security.0.2
+- Rebase 8.7p1-34.el9_3.security.0.1 on 8.7p1-34.3
+- Build without Kerberos support (shortens &quot;ldd sshd&quot; from 20 to 13 lines)
+
+* Wed Nov 22 2023 Solar Designer &lt;solar@openwall.com&gt; 8.7p1-34.el9_3.security.0.1
 - Rebase 8.7p1-30.el9.security.0.2 on 8.7p1-34
 
 * Sat Oct 07 2023 Solar Designer &lt;solar@openwall.com&gt; 8.7p1-30.el9.security.0.2
@@ -738,7 +743,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 25, 2023</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 11, 2024</span>
   </span>
 
     
@@ -798,7 +803,7 @@
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.expand", "navigation.indexes", "navigation.instant", "navigation.sections", "navigation.top", "navigation.tracking", "navigation.path", "search.highlight", "search.suggest", "toc.integrate", "content.action.edit"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.8fd75fb4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
     
   </body>
