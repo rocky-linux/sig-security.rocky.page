@@ -2,7 +2,7 @@
 
 ## EL9
 
-- Version `8.7p1-34.3.el9_3.security.0.2`
+- Version `8.7p1-34.3.el9_3.security.0.3`
 - Based on `8.7p1-34.el9_3.3`
 
 ### Changes summary
@@ -13,6 +13,11 @@
 ### Change log
 
 ```
+* Sat Mar 16 2024 Solar Designer <solar@openwall.com> 8.7p1-34.3.el9_3.security.0.3
+- Comment out GSSAPI* lines in /etc/ssh/ssh*_config.d/50-redhat.conf and patch
+  the code to silently ignore GSSAPIKexAlgorithms when unsupported (like it is
+  in our new without-Kerberos build)
+
 * Mon Mar 11 2024 Solar Designer <solar@openwall.com> 8.7p1-34.3.el9_3.security.0.2
 - Rebase 8.7p1-34.el9_3.security.0.1 on 8.7p1-34.3
 - Build without Kerberos support (shortens "ldd sshd" from 20 to 13 lines)
