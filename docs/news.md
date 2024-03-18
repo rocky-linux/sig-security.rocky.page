@@ -2,7 +2,7 @@
 
 These are what we consider significant SIG/Security news items, not an exhaustive list of package updates and wiki edits.
 
-## March 11, 2024
+## March 11 to 16, 2024
 
 [openssh](packages/openssh.md) rebased on upstream EL 8.7p1-34.3 with fixes for CVE-2023-48795 (Terrapin attack) and CVE-2023-51385, now building it without Kerberos support (further shortens `ldd sshd` from 20 to 13 lines, down from 28 lines in upstream EL).
 
